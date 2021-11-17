@@ -78,10 +78,13 @@ module.exports = {
           // This tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
           w3c: false,
           args: [
-            //'--no-sandbox',
-            //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
-            //'--headless'
+            '--no-sandbox',
+            '--ignore-certificate-errors',
+            '--allow-insecure-localhost',
+            '--headless',
+            '--disable-setuid-sandbox',
+            '--whitelist-ips',
+            '--disable-dev-shm-usage'
           ]
         }
       },
