@@ -1,6 +1,6 @@
 module.exports = {
-    '@tags': ['google'],
-    'Google Advanced Search: Elon Musk'(browser) {
+    '@tags': ['google2'],
+    'Google Advanced Search: Elon Musk': function (browser) {
         const mainQuery = 'Elon Musk';
         const mainQueryInputSelector = 'input[name="as_q"]';
 
@@ -21,6 +21,7 @@ module.exports = {
             .click(langDropdownValueSelector)
             .click(lastUpdateDropdownSelector)
             .click(lastUpdateDropdownValueSelector)
+            .perform(() => { debugger; })
             .click(submitButtonSelector)
             .assert.urlContains('as_q=Elon+Musk', 'Query is Elon Musk')
             .assert.urlContains('lr=lang_it', 'Language is Italian')
